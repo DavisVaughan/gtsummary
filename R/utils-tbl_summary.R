@@ -870,10 +870,10 @@ extracting_function_calls_from_stat_display <- function(stat_display, variable) 
     unlist()
 
   if (length(fns_names_chr) == 0) {
-    stop(glue(
-      "No summary function found in `{stat_display}` for variable '{variable}'.\n",
-      "Did you wrap the function name in curly brackets?"
-    ), call. = FALSE)
+    cli::cli_inform(c(
+      "!" = "{.code statistic=} argument: No summary function found in {.val {stat_display}} for variable {.val {variable}}.",
+      "i" = "Did you wrap the function name in curly brackets?"
+    ))
   }
 
   # removing elements protected as other items

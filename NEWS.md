@@ -1,5 +1,7 @@
 # gtsummary (development version)
 
+* Downgraded from error to message when a user passes a string in `tbl_summary(statistic=)` that does not include a function wrapped in curly brackets. (#1328)
+
 * Added additional options to `remove_row_type(type = c("level", "all"))`.
   - Use `type = "all"` to remove all rows associated with the variable(s) specified in `remove_row_type(variables=)`.
   - Use `type = "level"` in conjunction with new argument `level_values=` to remove specified levels for a variable, or do not use the new argument to remove all levels for categorical variables.
